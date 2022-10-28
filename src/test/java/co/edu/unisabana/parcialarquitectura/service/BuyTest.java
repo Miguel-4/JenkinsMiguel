@@ -13,7 +13,7 @@ class BuyTest {
   Buy service;
 
   @Test
-  void Given_same_vendor_and_buyer_When_makePurchase_Then_IllegalSaleException() {
+  public void Given_same_vendor_and_buyer_When_makePurchase_Then_IllegalSaleException() {
     service = new Buy(new Database());
     Throwable exception = assertThrows(IllegalSaleException.class, () -> {
       service.makePurchase(2, 2, "Books");
