@@ -30,7 +30,7 @@ class BuyTest {
   @Test
   void Given_a_vendor_and_a_different_buyer_but_a_null_item_When_makePurchase_Then_sale_was_not_possible() {
     service = new Buy(new Database());
-    assertEquals("The sale was possible", service.makePurchase(2, 3, null));
+    assertEquals("The sale was not possible", service.makePurchase(2, 3, null));
   }
   @Test
   void Given_a_vendor_and_a_different_buyer_but_0_buyerCode_When_makePurchase_Then_sale_was_not_possible() {
